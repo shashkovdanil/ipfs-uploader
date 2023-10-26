@@ -1,0 +1,49 @@
+{
+  "name": "web3-plugin-ipfs",
+  "version": "1.0.0",
+  "description": "A Web3.js 4.x Plugin for Uploading files to IPFS",
+  "author": "Danil Shashkov <shashkovdanil@gmail.com>",
+  "main": "lib/index.js",
+  "homepage": "https://github.com/shashkovdanil/web3.js-plugin-ipfs#readme",
+  "bugs": {
+    "url": "https://github.com/shashkovdanil/web3.js-plugin-ipfs/issues",
+    "email": "shashkovdanil@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:shashkovdanil/web3.js-plugin-ipfs.git"
+  },
+  "license": "MIT",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "clean": "rimraf ./lib",
+    "lint": "eslint --ext .ts",
+    "build": "npm run test && npm run clean && node scripts/build.mjs",
+    "migrate": "truffle migrate",
+    "test:node": "vitest run",
+    "test:browser": "vitest run --browser.provider=playwright --browser.name=chromium --browser.headless",
+    "test": "npm run test:node && npm run test:browser"
+  },
+  "devDependencies": {
+    "@chainsafe/eslint-config": "^2.1.1",
+    "@helia/unixfs": "^1.4.2",
+    "@playwright/test": "^1.39.0",
+    "@types/node": "^20.8.8",
+    "@vitest/browser": "^0.34.6",
+    "esbuild": "^0.19.5",
+    "eslint": "^8.52.0",
+    "helia": "^2.0.3",
+    "prettier": "^3.0.3",
+    "rimraf": "^5.0.5",
+    "truffle": "^5.11.5",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2",
+    "vitest": "^0.34.6",
+    "web3": "^4.2.0"
+  },
+  "peerDependencies": {
+    "web3": ">= 4.0.3 < 5"
+  }
+}

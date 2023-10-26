@@ -1,0 +1,6 @@
+contracts
+build
+migrations
+lib
+*.cjs
+*.mjs

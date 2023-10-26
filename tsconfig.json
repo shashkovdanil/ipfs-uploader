@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "resolveJsonModule": true,
+    "forceConsistentCasingInFileNames": true,
+    "target": "es2020",
+    "module": "CommonJS",
+    "declaration": true,
+    "moduleResolution": "node",
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "pretty": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "declarationMap": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "outDir": "lib",
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  },
+  "include": ["src", "test", "truffle-config.js", "playwright.config.ts", "vitest.config.ts"],
+  "exclude": ["node_modules", "contracts", "migrations", "build"]
+}
